@@ -14,9 +14,9 @@ public class TokyoTalkiesPage extends ShopDemoQaBase {
 	@FindBy(xpath = "//Select[@id='color']")
 	WebElement colour;
 
-	@FindBy(xpath = "//button[@class='qty-increase']")
-	WebElement qty;
-
+	@FindBy(xpath = "//input[@class='input-text qty text']")
+	WebElement quantity;
+	
 	@FindBy(xpath = "//button[text()='Add to cart']")
 	WebElement addToCart;
 
@@ -52,9 +52,12 @@ public class TokyoTalkiesPage extends ShopDemoQaBase {
 		}
 	}
 
-	public void selectQuantity() {
+	public void selectQuantity(String qty) {
 		try {
-			qty.click();
+			quantity.clear();
+			quantity.sendKeys(qty);
+			Thread.sleep(2000);
+			
 		} catch (ElementClickInterceptedException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

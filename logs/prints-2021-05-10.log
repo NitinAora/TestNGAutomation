@@ -1,0 +1,6 @@
+17:39:11.306 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Selected the Color
+17:39:14.525 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Selected the Quantity
+17:39:16.790 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Added to the Cart
+17:39:19.495 [main] INFO  com.shop.demoqa.base.ShopDemoQaBase - Located the config file
+17:39:19.496 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Clicked on view the cart
+17:39:19.674 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Verifed the order details and Quantity

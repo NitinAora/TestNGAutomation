@@ -10,20 +10,25 @@ import com.shop.demoqa.base.ShopDemoQaBase;
 
 public class CartPage extends ShopDemoQaBase {
 
+	int amount=100;
+	
 	// These are Page factory
 	@FindBy(xpath = "//input[@class='input-text qty text']")
 	WebElement qtyDisplayed;
 
-	@FindBy(xpath = "//bdi[text()=200]")
+	@FindBy(xpath = "//td[@class='product-subtotal']")
 	WebElement totalAmount;
 
 	@FindBy(xpath = "//div[@class='wc-proceed-to-checkout']")
 	WebElement proceedToCheckOut;
 
 	// Verifying the order details and quantity
-	public void verifyTotalAmountAndQuantity() {
-		Assert.assertEquals(totalAmount.getText().toString().substring(1, 4), "200");
-		Assert.assertEquals(qtyDisplayed.getAttribute("value"), "2");
+	public void verifyTotalAmountAndQuantity(String qty) {
+		
+		
+		int currentTotalAmount = amount * Integer.parseInt(qty);
+		Assert.assertEquals(qtyDisplayed.getAttribute("value"), qty);
+		Assert.assertEquals(totalAmount.getText().toString().substring(1, 4), currentTotalAmount+"");
 	}
 
 	// Initializing the Page Objects

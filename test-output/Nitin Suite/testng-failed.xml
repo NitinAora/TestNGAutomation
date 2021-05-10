@@ -10,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="placeOrderEndToEndScenario" invocation-numbers="0"/>
+          <include name="placeOrderEndToEndScenario" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.shop.demoq.testcase.PlaceOrderTest -->
     </classes>

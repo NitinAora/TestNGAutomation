@@ -3,7 +3,6 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Nitin Suite]">
   <listeners>
     <listener class-name="com.shop.demoqa.extentReportListner.TestListeners"/>
-    <listener class-name="com.shop.demoqa.extentReportListner.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" verbose="0" name="TestCaseEndToEndScenario(failed)">
     <classes>
@@ -11,7 +10,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="placeOrderEndToEndScenario" invocation-numbers="0 0 1 1"/>
+          <include name="placeOrderEndToEndScenario" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.shop.demoq.testcase.PlaceOrderTest -->
     </classes>

@@ -49,7 +49,11 @@ public class PlaceOrderTest extends ShopDemoQaBase {
 
 	@DataProvider
 	public Object[][] getTestData() throws IOException {
+		
 		ArrayList<ArrayList<String>> dataTemp = DataDrivenUtil.getDataTemp("EndToEnd");
+		if(dataTemp.isEmpty()) { // if nothing matches
+			return new Object[0][0];
+		}
 		Object[][] objArray = new Object[dataTemp.size()][dataTemp.get(0).size()];
 		for (int i = 0; i < dataTemp.size(); i++) {
 			for (int j = 0; j < dataTemp.get(0).size(); j++) {
@@ -60,6 +64,38 @@ public class PlaceOrderTest extends ShopDemoQaBase {
 		return objArray;
 
 	}
+	
+	
+	
+/*	  @DataProvider public static Object[][] getTestData() throws IOException {
+	  Object[][] data = DataDrivenUtil.getData("EndToEnd"); return data;  
+	  }
+	 */
+	
+/*	@DataProvider
+	public Object[][] getTestData() {
+		Object[][] data = new Object[2][7];
+
+		data[0][0] = "Nitin";
+		data[0][1] = "Arora";
+		data[0][2] = "123 Street Address";
+		data[0][3] = "Oakville";
+		data[0][4] = "123456";
+		data[0][5] = "8787878787";
+		data[0][6] = "narora@gmail.com";
+
+		data[1][0] = "Nitin";
+		data[1][1] = "Arora";
+		data[1][2] = "123 Street Address";
+		data[1][3] = "Oakville";
+		data[1][4] = "123456";
+		data[1][5] = "8787878787";
+		data[1][6] = "maeo@gmail.com";
+		log.info("Returning the data for billing details");
+		return data;
+
+	}*/
+	
 	/* This test case is an end to end scenario which verify the functionality,
 	 when the user navigates to the Shop Demo QA home page
 	 and search the item to purchase
@@ -69,7 +105,7 @@ public class PlaceOrderTest extends ShopDemoQaBase {
 	 and places the order and confirms the orders*/
 	@Test(dataProvider = "getTestData")
 	public void placeOrderEndToEndScenario(String testCase, String fName, String lName, String streetAdd, String twn,
-			String pin, String phn, String email, Method method) throws InterruptedException {
+			String pin, String phn, String email, String qty, Method method) throws InterruptedException {
 		ExtentTest test= ExtentTestManager.startTest(method.getName(), "Invalid Login Scenario with empty username and password.");
 		
 		String title = homePage.ValidateHomePageTitle();
@@ -89,8 +125,8 @@ public class PlaceOrderTest extends ShopDemoQaBase {
 
 		tokyoTalkiesPage.selectColor();
 		log.info("Selected the Color");
-
-		tokyoTalkiesPage.selectQuantity();
+		
+		tokyoTalkiesPage.selectQuantity(qty);
 		log.info("Selected the Quantity");
 
 		tokyoTalkiesPage.addToCart();
@@ -99,7 +135,7 @@ public class PlaceOrderTest extends ShopDemoQaBase {
 		cartPage = tokyoTalkiesPage.clickOnViewCart();
 		log.info("Clicked on view the cart");
 
-	    cartPage.verifyTotalAmountAndQuantity();
+	    cartPage.verifyTotalAmountAndQuantity(qty);
 		log.info("Verifed the order details and Quantity");
 
 		checkoutDetailsPage = cartPage.ProceedToCheckOut();
