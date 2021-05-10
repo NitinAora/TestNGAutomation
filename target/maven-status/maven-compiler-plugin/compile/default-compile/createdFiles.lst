@@ -1,0 +1,7 @@
+com\shop\demoqa\base\ShopDemoQaBase.class
+com\shop\demoq\util\DataDrivenUtil.class
+com\shop\demoqa\pages\OrderConfirmationPage.class
+com\shop\demoqa\pages\TokyoTalkiesPage.class
+com\shop\demoqa\pages\CheckoutDetailsPage.class
+com\shop\demoqa\pages\HomePage.class
+com\shop\demoqa\pages\CartPage.class

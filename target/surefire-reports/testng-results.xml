@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Nitin Suite" duration-ms="38851" started-at="2021-05-09T22:29:47 EDT" finished-at="2021-05-09T22:30:26 EDT">
+    <groups>
+    </groups>
+    <test name="TestCaseEndToEndScenario" duration-ms="38851" started-at="2021-05-09T22:29:47 EDT" finished-at="2021-05-09T22:30:26 EDT">
+      <class name="com.shop.demoq.testcase.PlaceOrderTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.shop.demoq.testcase.PlaceOrderTest@5c90e579]" name="setUp" is-config="true" duration-ms="12021" started-at="2021-05-09T22:29:48 EDT" finished-at="2021-05-09T22:30:00 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="placeOrderEndToEndScenario(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.shop.demoq.testcase.PlaceOrderTest@5c90e579]" name="placeOrderEndToEndScenario" duration-ms="24881" started-at="2021-05-09T22:30:00 EDT" data-provider="getTestData" finished-at="2021-05-09T22:30:25 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[EndToEnd]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Nitin]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Arora]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[ABC Street]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Oakville]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[110001]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1212121212]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[nitin@gmail.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[public void com.shop.demoq.testcase.PlaceOrderTest.placeOrderEndToEndScenario(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- placeOrderEndToEndScenario -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.shop.demoq.testcase.PlaceOrderTest@5c90e579]" name="tearDown" is-config="true" duration-ms="650" started-at="2021-05-09T22:30:25 EDT" finished-at="2021-05-09T22:30:26 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.shop.demoq.testcase.PlaceOrderTest -->
+    </test> <!-- TestCaseEndToEndScenario -->
+  </suite> <!-- Nitin Suite -->
+</testng-results>

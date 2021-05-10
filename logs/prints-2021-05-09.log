@@ -1,0 +1,6 @@
+22:30:11.065 [main] INFO  com.shop.demoqa.base.ShopDemoQaBase - Located the config file
+22:30:11.070 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Clicked on view the cart
+22:30:11.383 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Verifed the order details and Quantity
+22:30:13.753 [main] INFO  com.shop.demoqa.base.ShopDemoQaBase - Located the config file
+22:30:13.763 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Clicked on proceed to checkout
+22:30:22.120 [main] INFO  com.shop.demoq.testcase.PlaceOrderTest - Entered the Billing Details
